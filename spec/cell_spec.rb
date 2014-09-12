@@ -1,4 +1,7 @@
-describe 'Cell' do
+class Cell
+end
+
+describe Cell do
   subject { described_class.new(0, 0) }
   it 'counts neighbors' do
     expect(subject.neighbors).to eq 0
