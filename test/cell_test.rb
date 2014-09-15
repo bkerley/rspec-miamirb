@@ -10,6 +10,12 @@ class CellTest < Minitest::Test
   end
 
   def test_comes_to_life
+    @board = Minitest::Mock.new
+    @board.expect :neighbors, 3
+
+    c = Cell.new(@board, 0, 0)
+
+    assert c.become_alive?
   end
   def test_stays_alive
   end
